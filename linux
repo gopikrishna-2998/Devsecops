@@ -3,7 +3,10 @@ most frequently used commands in realtime scenario
 ssh -i <private-key> ec2-user@IP --- connect ec2 instance with ip address
 ssh-keygen -f directory --- genrating key.
 
-
+$ -> normal user
+# -> root user
+sudo su - -> I will land into root user home directory
+sudo su -> land into same directory as root
 pwd ----- present directory shows
 mkdir ---- with help of this command we can create directory
 cd ---- current directory
