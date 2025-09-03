@@ -1,0 +1,28 @@
+most frequently used commands in realtime scenario
+--------------------------------------------------
+pwd ----- present directory shows
+mkdir ---- with help of this command we can create directory
+cd ---- current directory
+cd .. ---- come back to previos directory
+ls ---- list of sub-directory
+touch <filename> ------ to create file
+cat > filename ----- enter content into file.
+cat >> filename ---- content append when we use this command.
+rm -f filename ----- deletes the file.
+rmdir <directory name> ------ deletes directory.
+rm -rf directoryname ----- recursively and forcefully delete the directory with files.
+cp filename <destination path> ----- copy the file.
+mv filename <destination path>  ---- move the file from source to destination.
+mv <filename> <newfilename>or<destination path/newfilename>   ------ with help of mv command we can rename the file name also.
+grep ---- with help of grep we can take input of second command from first command 
+ex. cat linux.txt | grep -i "hello"
+wget ----- we can download the content.
+curl ----- it shows the content without downloading.
+
+cut -d "/" -f1
+ex. echo 'https://github.com/daws-86s/notes/blob/main/session-03.txt' | cut -d "/" -f8
+output: https
+
+awk -F "/" '{print $1F}'
+ex. echo 'https://github.com/daws-86s/notes/blob/main/session-03.txt' | awk -F "/" '{print $1F}'
+output: https.
