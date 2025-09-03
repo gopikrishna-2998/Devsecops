@@ -1,5 +1,9 @@
 most frequently used commands in realtime scenario
 --------------------------------------------------
+ssh -i <private-key> ec2-user@IP --- connect ec2 instance with ip address
+ssh-keygen -f directory --- genrating key.
+
+
 pwd ----- present directory shows
 mkdir ---- with help of this command we can create directory
 cd ---- current directory
