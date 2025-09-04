@@ -33,3 +33,123 @@ output: https
 awk -F "/" '{print $1F}'
 ex. echo 'https://github.com/daws-86s/notes/blob/main/session-03.txt' | awk -F "/" '{print $1F}'
 output: https.
+---------------------------------------------------------------------------------------------------
+
+vim file
+---------
+vim <file-name>
+1. if file already exists, it will open
+2. if file does not exists, then it will create and open
+Default mode is esc mode.
+
+Colon/Command Mode
+=================
+:wq -> write and quit
+:q! -> quit without saving
+:q -> just quit
+:set nu -> display line numbers
+:<line-number> -> cursor will go that line
+:/<word-to-search> -> search from top
+:?<word-to-search> -> search from bottom
+:<line-number>d -> deletes that line
+:noh -> no highlight
+:28s/root/ROOT -> line number 28, replace root with ROOT. It replaces the first occurence in that line
+
+:29s/root/ROOT/g -> g for global. means 29th line all root occurences should be replaced with ROOT
+
+:%s/root/ROOT/g -> all lines all occurences in the file
+
+Esc Mode
+============
+gg --> takes us to top of the file
+shift+g -> takes us to bottom of the file
+u -> undo
+ctrl+r -> redo
+dd -> deletes the line
+yy(yank) -> copies the line
+p -> paste below the line
+shift+p -> paste above the line
+
+head <file-name> -> displays top 10 lines of the file
+tail <file-name> -> displays bottom 10 lines
+
+head -n 8 | tail -n 3
+
+55-65
+
+head -n 65 | tail -n 11
+
+Linux Administration
+======================
+User Management
+
+User Groups Roles Permissions
+
+User -> A human
+Group -> A team of humans
+Roles -> position
+Permissions -> Access to the roles
+
+1. create user
+2. create group
+3. add user to the group
+4. remove user from the group
+5. remove user
+6. remove group
+
+1. create devops group
+2. create gopi user
+3. add gopi to devops group
+4. remove gopi from devops group
+5. remove gopi user
+
+useradd gopi -> creates gopi user
+groupadd devops -> creaes devops group
+
+id <user-name>
+id gopi
+uid=1001(gopi) gid=1001(gopi) groups=1001(gopi)
+
+when you create user in Linux, by default it will create one group with same username
+
+/etc/passwd
+gopi:x:1001:1001::/home/gopi:/bin/bash
+
+/etc/group
+devops:x:1002:
+
+/etc/shadow -> encrypted password
+
+A user in Linux must have 1 primary group and atleast 1 secondary group
+
+usermod -g <group-name> <user-name> --> adding gopi to devops group
+usermod -aG <group-name> <user-name> --> adding gopi to secondary group
+
+passwd <user-name>
+
+/etc/ssh/sshd_config --> SSH configuration
+
+PasswordAuthentication no
+
+vim /etc/ssh/sshd_config
+sshd -t -> checks the syntax of ssh
+
+systemctl restart sshd
+
+gpasswd -d <user-name> <group-name>
+
+id gopi
+gopi gopi gopi
+
+files and permissions
+=====================
+Read    -> 4
+Write   -> 2
+Execute -> 1
+
+-	rw-			r--		r--
+	owner/user	group	others
+	u			   g		o
+	
+chmod g+w 
+chmod 744
