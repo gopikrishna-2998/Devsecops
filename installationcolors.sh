@@ -15,8 +15,9 @@ validate(){
        echo "install of $2 is failure"
        exit 1
     else
-       echo -e "$g install of $2 is sucess $n"
+       echo -e "install of $2 is $g sucess $n"
 }
+
 dnf list installed apache
 if [ $? -ne 0 ]; then
     dnf install apache -y
