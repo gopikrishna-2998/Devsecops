@@ -30,5 +30,5 @@ if [ $? -ne 0 ]; then
    dnf install nginx -y
    validate $? "nginx"
 else
-    echo -e "nginx already $g installed $n"
+    echo -e "nginx already $g installed $n" | tee -a $LOG_FILE
 fi
