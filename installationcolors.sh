@@ -12,10 +12,11 @@ if [ $USERID -ne 0 ]; then
 fi
 validate(){
     if [ $1 -ne 0 ]; then
-       echo  "install $2 of  is failure"
+       echo "error $2 installing failure"
        exit 1
     else
-       echo  "install $2 of  is  sucess "
+        echo "installing $2 is success"
+    fi
 }
 
 dnf list installed apache
