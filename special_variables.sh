@@ -6,3 +6,6 @@ echo "script name: $0"   #$0 is used to get scriptname
 echo "directory of this scrip: $PWD"
 echo "who is running: $USER"
 echo "home directory: $HOME"
+echo "pid oth process: $$"
+sleep 30 &
+echo "pid of the last command: $!"
