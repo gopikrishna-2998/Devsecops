@@ -9,4 +9,4 @@ sum=$(($number1 + $number2))
 echo "sum of two numbers: $sum"
 
 FRIENDS=("Dhoni" "KOHLI" "Rohit")
-echo "all friends:: $FRIENDS[@]"
+echo "all friends:: ${FRIENDS}[@]"
