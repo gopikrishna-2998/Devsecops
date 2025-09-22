@@ -19,5 +19,10 @@ validate(){
     fi
 }
 
-dnf install nginx -y
-validate $? "nginx"
+dnf list installed nginx
+if [ $? -ne 0 ]; then
+   dnf install nginx -y
+   validate $? "nginx"
+else
+    echo "nginx already installed"
+fi
