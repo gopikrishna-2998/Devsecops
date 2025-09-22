@@ -14,5 +14,5 @@ if [ $? -ne 0 ]; then
    exit 1
 
 else
-   echo: "redis installed successfully"
+   echo "redis installed successfully"
 fi 
