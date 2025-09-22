@@ -19,10 +19,5 @@ validate(){
     fi
 }
 
-dnf list installed apache
-if [ $? -ne 0 ]; then
-    dnf install apache -y
-    validate $? "apache"
-else
-    echo  " now installed "
-fi
+dnf install apache -y
+validate $? "apache"
