@@ -19,5 +19,5 @@ validate(){
     fi
 }
 
-dnf install apache -y
-validate $? "apache"
+dnf install nginx -y
+validate $? "nginx"
