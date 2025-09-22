@@ -10,3 +10,4 @@ echo "sum of two numbers: $sum"
 
 FRIENDS=("Dhoni" "KOHLI" "Rohit")
 echo "all friends:: ${FRIENDS[@]}"
+echo "all friends:: ${FRIENDS[0]}"
