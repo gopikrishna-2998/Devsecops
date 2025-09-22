@@ -7,15 +7,15 @@ y="\e[33m"
 n="\e[0m"
 
 if [ $USERID -ne 0 ]; then
-   echo -e "$r error: check the root privelages $n"
+   echo "error: check the root privelages"
    exit 1
 fi
 validate(){
     if [ $1 -ne 0 ]; then
-       echo -e "install of $2 is failure"
+       echo  "install $2 of  is failure"
        exit 1
     else
-       echo -e "install of $2 is $g sucess $n"
+       echo  "install $2 of  is  sucess "
 }
 
 dnf list installed apache
@@ -23,5 +23,5 @@ if [ $? -ne 0 ]; then
     dnf install apache -y
     validate $? "apache"
 else
-    echo -e " $y now installed $n"
+    echo  " now installed "
 fi
