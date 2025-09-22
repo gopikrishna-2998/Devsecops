@@ -12,7 +12,7 @@ if [ $USERID -ne 0 ]; then
 fi
 validate(){
     if [ $1 -ne 0 ]; then
-       echo "install of $2 is failure"
+       echo -e "install of $2 is failure"
        exit 1
     else
        echo -e "install of $2 is $g sucess $n"
