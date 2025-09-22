@@ -9,3 +9,9 @@ elif [ $NUMBER -eq 10 ]; then
 else
     echo "Given number $NUMBER grether than 10"
 fi
+
+
+# -lt less than
+# -gt grether than 
+# -eq equal to
+# -nq not equal
