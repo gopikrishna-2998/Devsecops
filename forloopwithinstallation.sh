@@ -32,7 +32,7 @@ do
 dnf list installed $package &>> LOG_FILE
 
 if [ $? -ne 0 ]; then
-   dnf install nginx -y &>> LOG_FILE
+   dnf install $package &>> LOG_FILE
    validate $? "$package"
 else
    echo "pacakage is already installed"
